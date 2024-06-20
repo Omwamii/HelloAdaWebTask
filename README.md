@@ -58,4 +58,9 @@ This is a simple web application for managing tasks, built with Django. Users ca
 - Undo a Task marked as done by clicking 'Undo' button
 
 ## Project Snapshots
+![Screenshot from 2024-06-20 18-45-11](https://github.com/Omwamii/HelloAdaWebTask/assets/100716410/717f3bee-c3cf-4a0f-8f42-fbb905a50c58)
+file:///home/omwami/Pictures/Screenshots/Screenshot%20from%202024-06-20%2018-45-48.png
+file:///home/omwami/Pictures/Screenshots/Screenshot%20from%202024-06-20%2018-39-47.png
+
+
 
