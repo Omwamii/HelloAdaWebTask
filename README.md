@@ -59,8 +59,6 @@ This is a simple web application for managing tasks, built with Django. Users ca
 
 ## Project Snapshots
 ![Screenshot from 2024-06-20 18-45-11](https://github.com/Omwamii/HelloAdaWebTask/assets/100716410/717f3bee-c3cf-4a0f-8f42-fbb905a50c58)
-file:///home/omwami/Pictures/Screenshots/Screenshot%20from%202024-06-20%2018-45-48.png
-file:///home/omwami/Pictures/Screenshots/Screenshot%20from%202024-06-20%2018-39-47.png
-
-
-
+![Screenshot from 2024-06-20 18-45-48](https://github.com/Omwamii/HelloAdaWebTask/assets/100716410/885222c8-16db-4c8e-8182-af51013e9660)
+![Screenshot from 2024-06-20 18-46-33](https://github.com/Omwamii/HelloAdaWebTask/assets/100716410/1e7743d4-57cd-4e28-bc72-b3bfead52a8b)
+![Screenshot from 2024-06-20 18-39-47](https://github.com/Omwamii/HelloAdaWebTask/assets/100716410/d6b9c8fc-265c-454e-9429-30ce083681b6)
