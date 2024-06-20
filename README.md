@@ -25,7 +25,7 @@ This is a simple web application for managing tasks, built with Django. Users ca
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Omwamii/taskmanagement.git
+    git clone https://github.com/Omwamii/HelloAdaWebTask.git
     cd taskmanagement
     ```
 
