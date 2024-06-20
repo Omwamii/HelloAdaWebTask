@@ -7,6 +7,9 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
      path('', views.task_list, name='task-list'),
     path('task/create/', views.task_create, name='task-create'),
-    path('task/<int:pk>/update/', views.task_update, name='task-update'),
-    path('task/<int:pk>/delete/', views.task_delete, name='task-delete'),
+    path('task/<str:pk>/view/', views.task_view, name='task-view'),
+    path('task/<str:pk>/update/', views.task_update, name='task-update'),
+    path('task/<str:pk>/delete/', views.task_delete, name='task-delete'),
+    path('task/<str:pk>/done/', views.task_mark_as_done, name='task-done'),
+    path('task/<str:pk>/undo/', views.task_undo, name='task-undo'),
 ]

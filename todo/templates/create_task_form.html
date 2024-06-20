@@ -1,22 +1,22 @@
 {% extends 'layout.html' %}
-{% block title %}Login{% endblock %}
+{% block title %} Create task{% endblock %}
 {% block body %}
 <form method="post" action="">
     {% csrf_token %}
     <section>
         <div class="signin"> 
             <div class="content">        
-                <h2>Login</h2>
+                <h2>Create task</h2>
                 <div class="form">
                     <div class="inputBox">
-                        <input type="email" required name="user-mail"> <i>Email</i>
+                        <input type="text" required name="title"> <i>Title</i>
                     </div>
                     <div class="inputBox">
-                        <input type="password" required name="user-pass"> <i>Password</i>
+                        <textarea name="description" rows="5" cols="10"></textarea>
+                        <i>Description</i>
                     </div>
-                    <span style="color: white;">Don't have an account?</span> <a href="{% url 'register' %}" id="signup-link">Signup</a>
                     <div class="inputBox">
-                        <input type="submit" value="Login">
+                        <input type="submit" value="Create">
                     </div>
                 </div>
             </div>

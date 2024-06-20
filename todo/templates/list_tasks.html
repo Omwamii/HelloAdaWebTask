@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Tasks{% endblock %}
+{% block body %}
+<h1>Hey there <span style="color: #0f0;">{{ user }}</span></h1>
+<div id="task-create-div">
+    <button id="create-task-btn">
+        <a href="{% url 'task-create' %}">Create Task</a>
+    </button>
+</div>
+<div id="tasks-container">
+    <div id="incomplete-tasks-container">
+        <h3 style="text-decoration: underline;">Pending Tasks</h3>
+        <ul>
+            {% for task in pending %}
+            <span><img id='goal-icon' class="list-icon"></span>
+            <li class="goals">
+                <div class="task">
+                    <a href="{% url 'task-view' task.pk %}">{{ task.title }}</a>
+                    <button id="edit-btn">
+                        <a href="{% url 'task-update' task.pk %}">Edit</a>
+                    </button>
+                    <button id="markdone-btn">
+                        <a href="{% url 'task-done' task.pk %}">Mark done</a>
+                    </button>
+                    <button class="delete-btn">
+                        <a href="{% url 'task-delete' task.pk %}">Delete</a>
+                    </button>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="completed-tasks-container">
+        <h3 style="text-decoration: underline;">Completed Tasks</h3>
+        <ul class="done">
+            {% for task in done %}
+            <span><img id='done-icon' class="list-icon"></span>
+            <li>
+                <div class="task">
+                    <a href="{% url 'task-view' task.pk %}">{{ task.title }}</a>
+                    <button id="undo-btn">
+                        <a href="{% url 'task-undo' task.pk %}">Undo</a>
+                    </button>
+                    <button class="delete-btn">
+                        <a href="{% url 'task-delete' task.pk %}">Delete</a>
+                    </button>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,6 +1,29 @@
-<h2>Register</h2>
-<form method="post">
+{% extends 'layout.html' %}
+{% block title%} Register {% endblock %}
+{% block body %}
+<form method="post" action="">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Register</button>
+    <section>
+        <div class="signin"> 
+            <div class="content">        
+                <h2>Sign up</h2>
+                <div class="form">
+                    <div class="inputBox">
+                        <input type="text" name="username"> <i>Username</i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" required name="user-mail"> <i>Email</i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" required name="user-pass"> <i>Password</i>
+                    </div>
+                    <span style="color: white;">Already have an account?</span> <a href="{% url 'login' %}" id="signup-link">Login</a>
+                    <div class="inputBox">
+                        <input type="submit" value="Sign up">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </form>
+{% endblock %}

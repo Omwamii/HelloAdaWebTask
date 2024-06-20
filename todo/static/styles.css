@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7px;
+}
+
+/* Theme switch */
+#switch-container {
+	position: relative;
+	display: inline-block;
+	width: 3.5em;
+	height: 2em;
+  }
+  
+  /* Hide default HTML checkbox */
+  #switch-container input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  /* The slider */
+  #switch-container .slider {
+	--background: linear-gradient(90deg, #f32a85 0%, #f19d36 100%);
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--background);
+	transition: background-color 0.5s;
+	border-radius: 30px;
+  }
+  
+  #switch-container .slider:before {
+	position: absolute;
+	content: "";
+	height: 1.4em;
+	width: 1.4em;
+	border-radius: 50%;
+	left: 10%;
+	bottom: 15%;
+	box-shadow: inset 15px -4px 0px 15px #f8ea27;
+	background: var(--background);
+	transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  
+  #switch-container input:checked + .slider:before {
+	transform: translateX(100%);
+	box-shadow: inset 8px -4px 0px 0px #f8f8f4;
+  }
+
+  /* login & signup forms styles */
+
+section .signin
+{
+  width: 400px;
+  background: #222;  
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0,0,0,9);
+  margin: 150px auto;
+}
+
+section .signin .content 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+section .signin .content h2 
+{
+  font-size: 2em;
+  color: #0f0;
+  text-transform: uppercase;
+}
+section .signin .content .form 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+section .signin .content .form .inputBox
+{
+  position: relative;
+  width: 100%;
+}
+section .signin .content .form .inputBox input, section .signin .content .form .inputBox textarea
+{
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+section .signin .content .form .inputBox i 
+{
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i
+{
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.signin .content .form .inputBox textarea:focus ~ i,
+.signin .content .form .inputBox textarea:valid ~ i
+{
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+
+#signup-link
+{
+  color: #0f0;
+  font-weight: 600;
+}
+.signin .content .form .inputBox input[type="submit"]
+{
+  padding: 10px;
+  background: #0f0;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+input[type="submit"]:active
+{
+  opacity: 0.6;
+}
+@media (max-width: 900px)
+{
+  section span 
+  {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+@media (max-width: 600px)
+{
+  section span 
+  {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
+}
+
+#task-create-div {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+#create-task-btn {
+    margin: 5px auto;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #03045e;
+    transition: all 0.5s ease;
+}
+
+#create-task-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+#create-task-btn:hover {
+    transform: scale(1.06);
+}
+
+#tasks-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#completed-tasks-container {
+    flex: 1 1 50%;
+    border-left: 1px solid #222;
+}
+
+#incomplete-tasks-container {
+    flex: 1 1 50%;
+    border-right: 1px solid #222;
+}
+
+ul {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+}
+
+button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.task {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
+.task button {
+    margin-left: 10px;
+    margin-top: -5px;
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.5s ease;
+    color: white;
+}
+
+.task button:hover {
+    transform: scale(1.05);
+}
+
+#edit-btn {
+    background-color: #219ebc;
+}
+
+#markdone-btn {
+    background-color: #004b23;
+}
+
+.delete-btn {
+    background-color: #d00000;
+}
+
+#undo-btn {
+    background-color: #e9c46a;
+}
+
+ul > li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul > li {
+    position: relative; /* Position relative for pseudo-element positioning */
+    padding-left: 25px;
+}
+
+.list-icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -62px;
+    margin-right: 3px;
+}
+
+#goal-icon {
+    content: url('../static/images/goal-light.png');
+}
+
+#done-icon {
+    content: url('../static/images/tick-light.png');
+}
+
+#logout-btn {
+    background-image: linear-gradient(to right, #134E5E 0%, #71B280  51%, #134E5E  100%);
+    width: 100px;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+}
+
+#task-content {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10;
+}
+
+.task > a {
+    color: black;
+    text-decoration: none;
+}
+
+.task > a:hover {
+    text-decoration: underline;
+}
+
+#home-btn {
+    background-color: #9d0208;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+}
+
+.dark-mode {
+    background-color: #343a40;
+    color: white;
+}

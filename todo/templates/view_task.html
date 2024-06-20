@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block title %} View task {% endblock %}
+{% block body %}
+<h1 style="text-align: center;">Task: <span style="color: #480ca8;">{{ task.title }}</span></h1>
+<div id="task-content">
+    <p style="font-size: 35px;">{{ task.description }}</p>
+    <p>Created on {{ task.created_on }}</p>
+</div>
+{% endblock %}
