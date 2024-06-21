@@ -13,7 +13,7 @@ This is a simple web application for managing tasks, built with Django. Users ca
   - Update the title and description of tasks.
   - Delete a task.
 - Database:
-  - Uses SQLite (or another relational database) to store user and task information.
+  - Uses SQLite to store user and task information.
   - Each user has their own set of tasks.
 
 ## Requirements
