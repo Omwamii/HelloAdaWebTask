@@ -50,8 +50,6 @@ def logout_view(request):
 @login_required
 @require_http_methods(['GET'])
 def task_list(request):
-    if request.user.is_anonymous:
-        return redirect('login')
     pending_tasks = Task.objects.filter(user=request.user, done=False)
     done_tasks = Task.objects.filter(user=request.user, done=True)
     return render(request, 'list_tasks.html', {'pending': pending_tasks, 'done': done_tasks})
